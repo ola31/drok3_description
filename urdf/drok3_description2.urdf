@@ -521,7 +521,22 @@
 
 
 
-
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l12_link_joint</leftFrontJoint>
+    <rightFrontJoint>r12_link_joint</rightFrontJoint>
+    <leftRearJoint>l11_link_joint</leftRearJoint>
+    <rightRearJoint>r11_link_joint</rightRearJoint>
+    <wheelSeparation>0.4</wheelSeparation>
+    <wheelDiameter>0.215</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
 
 
 
@@ -1430,7 +1445,7 @@
     </collision>
   </link>
   <joint
-    name="r2_link_joint"
+    name="r10_link_joint"
     type="continuous">
     <origin
       xyz="0.07576 -0.25972 -0.028"
@@ -1438,7 +1453,7 @@
     <parent
       link="base_link" />
     <child
-      link="r2_link" />
+      link="r10_link" />
     <axis
       xyz="0 1 0" />
   </joint>
@@ -1556,6 +1571,227 @@
       xyz="0 1 0" />
   </joint>
 
+
+<link
+    name="r11_link">
+    <inertial>
+      <origin
+        xyz="-2.92278207574136E-06 0 -2.08206009358336E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179989446096"
+        ixy="-3.17556586931068E-18"
+        ixz="-1.07013112858152E-08"
+        iyy="0.00188983973588254"
+        iyz="9.0339996868056E-19"
+        izz="0.00107180767895577" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r11_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.22424 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r11_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+<link
+    name="r12_link">
+    <inertial>
+      <origin
+        xyz="-3.65518028585943E-06 0 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828588" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.20129434385429E-18"
+        ixz="-2.60812953021254E-09"
+        iyy="0.00188983973588254"
+        iyz="9.59223116284526E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0380039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r12_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.22576 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r12_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+<link
+    name="l11_link">
+    <inertial>
+      <origin
+        xyz="-3.55518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.16860373019229E-18"
+        ixz="-2.6081295301747E-09"
+        iyy="0.00188983973588254"
+        iyz="7.92650267045416E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l11_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.22424 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l11_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+<link
+    name="l12_link">
+    <inertial>
+      <origin
+        xyz="-3.65518028585943E-06 -1.11022302462516E-16 -4.1842873894915E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828589" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.18775432759348E-18"
+        ixz="-2.6081295302701E-09"
+        iyy="0.00188983973588254"
+        iyz="8.03792722455923E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l12_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.22576 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l12_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
 
 
 </robot>
