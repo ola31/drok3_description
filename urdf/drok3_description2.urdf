@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="drok3_description2">
+  <link
+    name="base_footprint_link">
+    <inertial>
+      <origin
+        xyz="-1.25317946727543E-05 0 0.113005302816333"
+        rpy="0 0 0" />
+      <mass
+        value="3.02141422902365" />
+      <inertia
+        ixx="0.0423835325539121"
+        ixy="-1.16406809588335E-16"
+        ixz="3.76629582774629E-08"
+        iyy="0.0758033294719559"
+        iyz="2.81992537937316E-18"
+        izz="0.118174283651174" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/base_footprint_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <!--<collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/base_footprint_link.STL" />
+      </geometry>
+    </collision>-->
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0916307721495936 -0.000335907486689213 0.0569327313017182"
+        rpy="0 0 0" />
+      <mass
+        value="38.3049580066646" />
+      <inertia
+        ixx="0.189675133128325"
+        ixy="-6.87158011192175E-05"
+        ixz="-0.111395385918992"
+        iyy="0.808757796453613"
+        iyz="-7.34722853353462E-05"
+        izz="0.813726568476578" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <!--<collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/base_link.STL" />
+      </geometry>
+    </collision>-->
+  </link>
+  <joint
+    name="base_link_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.1105"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint_link" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="R1_link">
+    <inertial>
+      <origin
+        xyz="-2.97278207574136E-06 0 -2.08206009358336E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179989446096"
+        ixy="-3.17556586931068E-18"
+        ixz="-1.07013112858152E-08"
+        iyy="0.00188983973588254"
+        iyz="9.0339996868056E-19"
+        izz="0.00107180767895577" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R1_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.27424 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R1_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="R2_link">
+    <inertial>
+      <origin
+        xyz="-3.60518028585943E-06 0 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828588" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.20129434385429E-18"
+        ixz="-2.60812953021254E-09"
+        iyy="0.00188983973588254"
+        iyz="9.59223116284526E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0380039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R2_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.27576 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R2_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="R3_link">
+    <inertial>
+      <origin
+        xyz="3.24700269704881E-06 -5.55111512312578E-17 1.62153661337205E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828588" />
+      <inertia
+        ixx="0.00107179694558754"
+        ixy="-3.07511556235849E-18"
+        ixz="-9.10311589437715E-09"
+        iyy="0.00188983973588254"
+        iyz="7.7907126344076E-19"
+        izz="0.00107181062782919" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="102 51 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R3_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.48054 -0.25972 0.16296"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R3_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="L1_link">
+    <inertial>
+      <origin
+        xyz="-3.60518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.16860373019229E-18"
+        ixz="-2.6081295301747E-09"
+        iyy="0.00188983973588254"
+        iyz="7.92650267045416E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.27424 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="L2_link">
+    <inertial>
+      <origin
+        xyz="-3.60518028585943E-06 -1.11022302462516E-16 -4.1842873894915E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828589" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.18775432759348E-18"
+        ixz="-2.6081295302701E-09"
+        iyy="0.00188983973588254"
+        iyz="8.03792722455923E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.27576 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L2_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="L3_link">
+    <inertial>
+      <origin
+        xyz="-3.50122690040422E-06 -2.22044604925031E-16 9.55938123270439E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828588" />
+      <inertia
+        ixx="0.00107179397947648"
+        ixy="-3.27890477552922E-18"
+        ixz="5.78669645348872E-09"
+        iyy="0.00188983973588254"
+        iyz="7.58660421249286E-19"
+        izz="0.00107181359394025" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.46841 0.25972 0.16296"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L3_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>L2_link_joint</leftFrontJoint>
+    <rightFrontJoint>R2_link_joint</rightFrontJoint>
+    <leftRearJoint>L1_link_joint</leftRearJoint>
+    <rightRearJoint>R1_link_joint</rightRearJoint>
+    <wheelSeparation>0.4</wheelSeparation>
+    <wheelDiameter>0.215</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l2_link_joint</leftFrontJoint>
+    <rightFrontJoint>r2_link_joint</rightFrontJoint>
+    <leftRearJoint>l1_link_joint</leftRearJoint>
+    <rightRearJoint>r1_link_joint</rightRearJoint>
+    <wheelSeparation>0.4</wheelSeparation>
+    <wheelDiameter>0.215</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>L3_link_joint</leftFrontJoint>
+    <rightFrontJoint>R3_link_joint</rightFrontJoint>
+    <leftRearJoint>l4_link_joint</leftRearJoint>
+    <rightRearJoint>r4_link_joint</rightRearJoint>
+    <wheelSeparation>0.4</wheelSeparation>
+    <wheelDiameter>0.215</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l6_link_joint</leftFrontJoint>
+    <rightFrontJoint>r6_link_joint</rightFrontJoint>
+    <leftRearJoint>l5_link_joint</leftRearJoint>
+    <rightRearJoint>r5_link_joint</rightRearJoint>
+    <wheelSeparation>0.4</wheelSeparation>
+    <wheelDiameter>0.215</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l7_link_joint</leftFrontJoint>
+    <rightFrontJoint>r7_link_joint</rightFrontJoint>
+    <leftRearJoint>l8_link_joint</leftRearJoint>
+    <rightRearJoint>r8_link_joint</rightRearJoint>
+    <wheelSeparation>0.4</wheelSeparation>
+    <wheelDiameter>0.215</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l9_link_joint</leftFrontJoint>
+    <rightFrontJoint>r9_link_joint</rightFrontJoint>
+    <leftRearJoint>l10_link_joint</leftRearJoint>
+    <rightRearJoint>r10_link_joint</rightRearJoint>
+    <wheelSeparation>0.4</wheelSeparation>
+    <wheelDiameter>0.215</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <link
+    name="r1_link">
+    <inertial>
+      <origin
+        xyz="-2.77278207574136E-06 0 -2.08206009358336E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179989446096"
+        ixy="-3.17556586931068E-18"
+        ixz="-1.07013112858152E-08"
+        iyy="0.00188983973588254"
+        iyz="9.0339996868056E-19"
+        izz="0.00107180767895577" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="1.0 1.0 0.0308039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r1_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.07424 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r1_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+<link
+    name="r2_link">
+    <inertial>
+      <origin
+        xyz="-2.57278207574136E-06 0 -2.08206009358336E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179989446096"
+        ixy="-3.17556586931068E-18"
+        ixz="-1.07013112858152E-08"
+        iyy="0.00188983973588254"
+        iyz="9.0339996868056E-19"
+        izz="0.00107180767895577" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r2_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.12576 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r2_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+
+
+
+
+<link
+    name="l1_link">
+    <inertial>
+      <origin
+        xyz="-3.40518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.16860373019229E-18"
+        ixz="-2.6081295301747E-09"
+        iyy="0.00188983973588254"
+        iyz="7.92650267045416E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l1_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.07424 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l1_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+<link
+    name="l2_link">
+    <inertial>
+      <origin
+        xyz="-3.20518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.16860373019229E-18"
+        ixz="-2.6081295301747E-09"
+        iyy="0.00188983973588254"
+        iyz="7.92650267045416E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l2_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.12576 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l2_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+
+
+
+
+<link
+    name="r4_link">
+    <inertial>
+      <origin
+        xyz="-3.49518028585943E-06 0 -4.08428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828588" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.20129434385429E-18"
+        ixz="-2.60812953021254E-09"
+        iyy="0.00188983973588254"
+        iyz="9.59223116284526E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0380039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r4_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.38576 -0.25972 0.072"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r4_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+<link
+    name="l4_link">
+    <inertial>
+      <origin
+        xyz="-3.49518028585943E-06 -1.11022302462516E-16 -4.0842873894915E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828589" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.18775432759348E-18"
+        ixz="-2.6081295302701E-09"
+        iyy="0.00188983973588254"
+        iyz="8.03792722455923E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l4_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.38576 0.25972 0.072"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l4_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+
+
+<link
+    name="r5_link">
+    <inertial>
+      <origin
+        xyz="-3.54518028585943E-06 0 -4.13428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828588" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.20129434385429E-18"
+        ixz="-2.60812953021254E-09"
+        iyy="0.00188983973588254"
+        iyz="9.59223116284526E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0380039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r5_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.33576 -0.25972 0.022"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r5_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+<link
+    name="l5_link">
+    <inertial>
+      <origin
+        xyz="-3.54518028585943E-06 -1.11022302462516E-16 -4.1342873894915E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828589" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.18775432759348E-18"
+        ixz="-2.6081295302701E-09"
+        iyy="0.00188983973588254"
+        iyz="8.03792722455923E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l5_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.33576 0.25972 0.022"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l5_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+<link
+    name="r6_link">
+    <inertial>
+      <origin
+        xyz="-3.44518028585943E-06 0 -4.03428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828588" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.20129434385429E-18"
+        ixz="-2.60812953021254E-09"
+        iyy="0.00188983973588254"
+        iyz="9.59223116284526E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0380039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r6_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.43576 -0.25972 0.122"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r6_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+<link
+    name="l6_link">
+    <inertial>
+      <origin
+        xyz="-3.44518028585943E-06 -1.11022302462516E-16 -4.0342873894915E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828589" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.18775432759348E-18"
+        ixz="-2.6081295302701E-09"
+        iyy="0.00188983973588254"
+        iyz="8.03792722455923E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l6_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.43576 0.25972 0.122"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l6_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+<link
+    name="r7_link">
+    <inertial>
+      <origin
+        xyz="-2.72278207574136E-06 0 -2.08206009358336E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179989446096"
+        ixy="-3.17556586931068E-18"
+        ixz="-1.07013112858152E-08"
+        iyy="0.00188983973588254"
+        iyz="9.0339996868056E-19"
+        izz="0.00107180767895577" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="1.0 1.0 0.0308039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r7_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.02424 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r7_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+<link
+    name="r8_link">
+    <inertial>
+      <origin
+        xyz="-2.82278207574136E-06 0 -2.08206009358336E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179989446096"
+        ixy="-3.17556586931068E-18"
+        ixz="-1.07013112858152E-08"
+        iyy="0.00188983973588254"
+        iyz="9.0339996868056E-19"
+        izz="0.00107180767895577" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="1.0 1.0 0.0308039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r8_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.12424 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r8_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+<link
+    name="l7_link">
+    <inertial>
+      <origin
+        xyz="-3.35518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.16860373019229E-18"
+        ixz="-2.6081295301747E-09"
+        iyy="0.00188983973588254"
+        iyz="7.92650267045416E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l7_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.02424 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l7_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+<link
+    name="l8_link">
+    <inertial>
+      <origin
+        xyz="-3.40518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.16860373019229E-18"
+        ixz="-2.6081295301747E-09"
+        iyy="0.00188983973588254"
+        iyz="7.92650267045416E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l8_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.12424 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l8_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+<link
+    name="r9_link">
+    <inertial>
+      <origin
+        xyz="-2.52278207574136E-06 0 -2.08206009358336E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179989446096"
+        ixy="-3.17556586931068E-18"
+        ixz="-1.07013112858152E-08"
+        iyy="0.00188983973588254"
+        iyz="9.0339996868056E-19"
+        izz="0.00107180767895577" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r9_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.17576 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r9_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+<link
+    name="r10_link">
+    <inertial>
+      <origin
+        xyz="-2.62278207574136E-06 0 -2.08206009358336E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179989446096"
+        ixy="-3.17556586931068E-18"
+        ixz="-1.07013112858152E-08"
+        iyy="0.00188983973588254"
+        iyz="9.0339996868056E-19"
+        izz="0.00107180767895577" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/R1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r2_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.07576 -0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r2_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+<link
+    name="l9_link">
+    <inertial>
+      <origin
+        xyz="-3.15518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.16860373019229E-18"
+        ixz="-2.6081295301747E-09"
+        iyy="0.00188983973588254"
+        iyz="7.92650267045416E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l9_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.17576 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l9_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+<link
+    name="l10_link">
+    <inertial>
+      <origin
+        xyz="-3.25518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.697502716828587" />
+      <inertia
+        ixx="0.00107179270224566"
+        ixy="-3.16860373019229E-18"
+        ixz="-2.6081295301747E-09"
+        iyy="0.00188983973588254"
+        iyz="7.92650267045416E-19"
+        izz="0.00107181487117107" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1.0 0.4 0.0308039215686275 0" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l10_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.07576 0.25972 -0.028"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l10_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+</robot>
