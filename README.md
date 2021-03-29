@@ -3,6 +3,7 @@
 cd ~/catkin_ws/src
 
 git clone https://github.com/ola31/drok3_description.git
+
 git clone https://github.com/ola31/cmdvel_to_cmdvel2.git
 
 cd ~/catkin_ws
