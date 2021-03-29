@@ -10,15 +10,11 @@
     name="spawn_model"
     pkg="gazebo_ros"
     type="spawn_model"
-    args="-file $(find drok3_description2)/urdf/drok3_description2.urdf -urdf -model drok3_description2"
+    args="-file $(find drok3_description2)/world/drok3_simulator.sdf -sdf -model drok3_description2"
     output="screen" />
   <node
     name="fake_joint_calibration"
     pkg="rostopic"
     type="rostopic"
     args="pub /calibrated std_msgs/Bool true" />
-  <node
-    name="cmdvel_to_cmdvel2"
-    pkg="cmdvel_to_cmdvel2"
-    type="cmdvel_to_cmdvel2_node" />
 </launch>

@@ -424,11 +424,11 @@
     <rightFrontJoint>R2_link_joint</rightFrontJoint>
     <leftRearJoint>L1_link_joint</leftRearJoint>
     <rightRearJoint>R1_link_joint</rightRearJoint>
-    <wheelSeparation>0.4</wheelSeparation>
-    <wheelDiameter>0.215</wheelDiameter>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>20</torque>
-    <topicName>cmd_vel</topicName>
+    <torque>15</torque>
+    <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
@@ -441,11 +441,11 @@
     <rightFrontJoint>r2_link_joint</rightFrontJoint>
     <leftRearJoint>l1_link_joint</leftRearJoint>
     <rightRearJoint>r1_link_joint</rightRearJoint>
-    <wheelSeparation>0.4</wheelSeparation>
-    <wheelDiameter>0.215</wheelDiameter>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>20</torque>
-    <topicName>cmd_vel</topicName>
+    <torque>15</torque>
+    <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
@@ -458,11 +458,11 @@
     <rightFrontJoint>R3_link_joint</rightFrontJoint>
     <leftRearJoint>l4_link_joint</leftRearJoint>
     <rightRearJoint>r4_link_joint</rightRearJoint>
-    <wheelSeparation>0.4</wheelSeparation>
-    <wheelDiameter>0.215</wheelDiameter>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>20</torque>
-    <topicName>cmd_vel</topicName>
+    <torque>15</torque>
+    <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
@@ -475,11 +475,11 @@
     <rightFrontJoint>r6_link_joint</rightFrontJoint>
     <leftRearJoint>l5_link_joint</leftRearJoint>
     <rightRearJoint>r5_link_joint</rightRearJoint>
-    <wheelSeparation>0.4</wheelSeparation>
-    <wheelDiameter>0.215</wheelDiameter>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>20</torque>
-    <topicName>cmd_vel</topicName>
+    <torque>15</torque>
+    <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
@@ -492,11 +492,11 @@
     <rightFrontJoint>r7_link_joint</rightFrontJoint>
     <leftRearJoint>l8_link_joint</leftRearJoint>
     <rightRearJoint>r8_link_joint</rightRearJoint>
-    <wheelSeparation>0.4</wheelSeparation>
-    <wheelDiameter>0.215</wheelDiameter>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>20</torque>
-    <topicName>cmd_vel</topicName>
+    <torque>15</torque>
+    <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
@@ -510,11 +510,11 @@
     <rightFrontJoint>r9_link_joint</rightFrontJoint>
     <leftRearJoint>l10_link_joint</leftRearJoint>
     <rightRearJoint>r10_link_joint</rightRearJoint>
-    <wheelSeparation>0.4</wheelSeparation>
-    <wheelDiameter>0.215</wheelDiameter>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>20</torque>
-    <topicName>cmd_vel</topicName>
+    <torque>15</torque>
+    <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
@@ -529,11 +529,11 @@
     <rightFrontJoint>r12_link_joint</rightFrontJoint>
     <leftRearJoint>l11_link_joint</leftRearJoint>
     <rightRearJoint>r11_link_joint</rightRearJoint>
-    <wheelSeparation>0.4</wheelSeparation>
-    <wheelDiameter>0.215</wheelDiameter>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>20</torque>
-    <topicName>cmd_vel</topicName>
+    <torque>15</torque>
+    <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
@@ -1588,7 +1588,7 @@
         iyz="9.0339996868056E-19"
         izz="0.00107180767895577" />
     </inertial>
-    <visual>
+    <!--<visual>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -1601,7 +1601,7 @@
         <color
           rgba="1.0 0.4 0.0308039215686275 0" />
       </material>
-    </visual>
+    </visual>-->
     <collision>
       <origin
         xyz="0 0 0"
@@ -1643,7 +1643,7 @@
         iyz="9.59223116284526E-19"
         izz="0.00107181487117107" />
     </inertial>
-    <visual>
+    <!--<visual>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -1656,7 +1656,7 @@
         <color
           rgba="1.0 0.4 0.0380039215686275 1" />
       </material>
-    </visual>
+    </visual>-->
     <collision>
       <origin
         xyz="0 0 0"
@@ -1700,7 +1700,7 @@
         iyz="7.92650267045416E-19"
         izz="0.00107181487117107" />
     </inertial>
-    <visual>
+    <!--<visual>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -1713,7 +1713,7 @@
         <color
           rgba="1.0 0.4 0.0308039215686275 1" />
       </material>
-    </visual>
+    </visual>-->
     <collision>
       <origin
         xyz="0 0 0"
@@ -1755,7 +1755,7 @@
         iyz="8.03792722455923E-19"
         izz="0.00107181487117107" />
     </inertial>
-    <visual>
+    <!--<visual>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -1768,7 +1768,7 @@
         <color
           rgba="1.0 0.4 0.0308039215686275 1" />
       </material>
-    </visual>
+    </visual>-->
     <collision>
       <origin
         xyz="0 0 0"
@@ -1792,6 +1792,438 @@
     <axis
       xyz="0 1 0" />
   </joint>
+
+
+<gazebo reference="base_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>base_link</bodyName>
+        <updateRateHZ>100.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>base_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+
+
+
+
+
+ <gazebo reference="L1_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>10.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1000000.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <material value="Gazebo/Black" />
+  </gazebo>
+
+
+ <gazebo reference="R1_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>10.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1000000.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <material value="Gazebo/Black" />
+  </gazebo>
+
+
+<gazebo reference="L2_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>10.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1000000.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <material value="Gazebo/Black" />
+  </gazebo>
+
+<gazebo reference="R2_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>10.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1000000.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <material value="Gazebo/Black" />
+  </gazebo>
+
+
+ <gazebo reference="l1_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>10.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+
+<gazebo reference="l2_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>10.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+
+<gazebo reference="l3_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>10.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="l4_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="l5_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="l6_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="l7_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="l8_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="l9_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="l10_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="l11_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="l12_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+
+
+
+<gazebo reference="r1_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>10.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r2_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>10.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r3_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>10.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r4_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r5_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r6_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r7_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r8_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r9_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r10_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r11_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
+<gazebo reference="r12_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+    <!--<material value="Gazebo/Black" />-->
+  </gazebo>
 
 
 </robot>

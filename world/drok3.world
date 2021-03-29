@@ -1,0 +1,2209 @@
+<sdf version='1.7'>
+  <world name='default'>
+    
+
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+
+
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+
+
+
+
+    <model name='drok3_description2'>
+      <link name='base_footprint_link'>
+        <inertial>
+          <pose>0.084931 -0.000311 0.163453 0 -0 0</pose>
+          <mass>41.3264</mass>
+          <inertia>
+            <ixx>0.240355</ixx>
+            <ixy>1.74943e-05</ixy>
+            <ixz>-0.125364</ixz>
+            <iyy>0.916377</iyy>
+            <iyz>-2.22716e-05</iyz>
+            <izz>0.955421</izz>
+          </inertia>
+        </inertial>
+        <visual name='base_footprint_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/base_footprint_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_footprint_link_fixed_joint_lump__base_link_visual_1'>
+          <pose>0 0 0.1105 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+      <joint name='L1_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.27424 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>L1_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='L1_link'>
+        <pose relative_to='L1_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-4e-06 -0 -0 0 -0 0</pose>
+          <mass>0.697503</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.1686e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.9265e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='L1_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='L1_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L1_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+
+      <joint name='L2_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.27576 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>L2_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='L2_link'>
+        <pose relative_to='L2_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-4e-06 -0 -0 0 -0 0</pose>
+          <mass>0.697503</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.18775e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>8.03793e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='L2_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='L2_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L2_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+
+
+
+      <joint name='L3_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.46841 0.25972 0.27346 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>L3_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='L3_link'>
+        <pose relative_to='L3_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-4e-06 -0 1e-06 0 -0 0</pose>
+          <mass>0.697503</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.2789e-18</ixy>
+            <ixz>5.7867e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.5866e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='L3_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='L3_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L3_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='R1_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.27424 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>R1_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+
+
+
+
+
+
+      <link name='R1_link'>
+        <pose relative_to='R1_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -2e-06 0 -0 0</pose>
+          <mass>0.697503</mass>
+          <inertia>
+            <ixx>0.0010718</ixx>
+            <ixy>-3.17557e-18</ixy>
+            <ixz>-1.07013e-08</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.034e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='R1_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='R1_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R1_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+
+
+
+      <joint name='R2_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.27576 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>R2_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='R2_link'>
+        <pose relative_to='R2_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-4e-06 0 -0 0 -0 0</pose>
+          <mass>0.697503</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.20129e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.59223e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='R2_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='R2_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R2_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+
+
+
+      <joint name='R3_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.48054 -0.25972 0.27346 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>R3_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='R3_link'>
+        <pose relative_to='R3_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>3e-06 -0 2e-06 0 -0 0</pose>
+          <mass>0.697503</mass>
+          <inertia>
+            <ixx>0.0010718</ixx>
+            <ixy>-3.07512e-18</ixy>
+            <ixz>-9.10312e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.79071e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='R3_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='R3_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R3_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+
+
+
+      <joint name='l10_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.07576 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l10_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l10_link'>
+        <pose relative_to='l10_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.1686e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.9265e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l10_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l11_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.22424 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l11_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l11_link'>
+        <pose relative_to='l11_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-4e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.1686e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.9265e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l11_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l12_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.22576 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l12_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l12_link'>
+        <pose relative_to='l12_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-4e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.18775e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>8.03793e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l12_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l1_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.07424 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l1_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l1_link'>
+        <pose relative_to='l1_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.1686e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.9265e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l1_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l2_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.12576 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l2_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l2_link'>
+        <pose relative_to='l2_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.1686e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.9265e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l2_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l4_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.38576 0.25972 0.1825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l4_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l4_link'>
+        <pose relative_to='l4_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.18775e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>8.03793e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l4_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l5_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.33576 0.25972 0.1325 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l5_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l5_link'>
+        <pose relative_to='l5_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-4e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.18775e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>8.03793e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l5_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l6_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.43576 0.25972 0.2325 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l6_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l6_link'>
+        <pose relative_to='l6_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.18775e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>8.03793e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l6_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l7_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.02424 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l7_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l7_link'>
+        <pose relative_to='l7_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.1686e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.9265e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l7_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l8_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.12424 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l8_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l8_link'>
+        <pose relative_to='l8_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.1686e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.9265e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l8_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='l9_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.17576 0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>l9_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='l9_link'>
+        <pose relative_to='l9_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 -0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.1686e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>7.9265e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='l9_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/L1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r10_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.07576 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r10_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r10_link'>
+        <pose relative_to='r10_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -2e-06 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.0010718</ixx>
+            <ixy>-3.17557e-18</ixy>
+            <ixz>-1.07013e-08</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.034e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r10_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r11_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.22424 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r11_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r11_link'>
+        <pose relative_to='r11_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -2e-06 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.0010718</ixx>
+            <ixy>-3.17557e-18</ixy>
+            <ixz>-1.07013e-08</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.034e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r11_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r12_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.22576 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r12_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r12_link'>
+        <pose relative_to='r12_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-4e-06 0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.20129e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.59223e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r12_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r1_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.07424 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r1_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r1_link'>
+        <pose relative_to='r1_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -2e-06 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.0010718</ixx>
+            <ixy>-3.17557e-18</ixy>
+            <ixz>-1.07013e-08</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.034e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r1_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r2_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.12576 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r2_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r2_link'>
+        <pose relative_to='r2_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -2e-06 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.0010718</ixx>
+            <ixy>-3.17557e-18</ixy>
+            <ixz>-1.07013e-08</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.034e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r2_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r4_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.38576 -0.25972 0.1825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r4_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r4_link'>
+        <pose relative_to='r4_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.20129e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.59223e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r4_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r5_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.33576 -0.25972 0.1325 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r5_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r5_link'>
+        <pose relative_to='r5_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-4e-06 0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.20129e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.59223e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r5_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r6_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.43576 -0.25972 0.2325 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r6_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r6_link'>
+        <pose relative_to='r6_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.00107179</ixx>
+            <ixy>-3.20129e-18</ixy>
+            <ixz>-2.60813e-09</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.59223e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r6_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r7_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.02424 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r7_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r7_link'>
+        <pose relative_to='r7_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -2e-06 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.0010718</ixx>
+            <ixy>-3.17557e-18</ixy>
+            <ixz>-1.07013e-08</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.034e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r7_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r8_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>-0.12424 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r8_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r8_link'>
+        <pose relative_to='r8_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -2e-06 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.0010718</ixx>
+            <ixy>-3.17557e-18</ixy>
+            <ixz>-1.07013e-08</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.034e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r8_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+      <joint name='r9_link_joint' type='revolute'>
+        <pose relative_to='base_footprint_link'>0.17576 -0.25972 0.0825 0 -0 0</pose>
+        <parent>base_footprint_link</parent>
+        <child>r9_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='r9_link'>
+        <pose relative_to='r9_link_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-3e-06 0 -2e-06 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.0010718</ixx>
+            <ixy>-3.17557e-18</ixy>
+            <ixz>-1.07013e-08</ixz>
+            <iyy>0.00188984</iyy>
+            <iyz>9.034e-19</iyz>
+            <izz>0.00107181</izz>
+          </inertia>
+        </inertial>
+        <collision name='r9_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/ola/catkin_ws/src/drok3_description2/meshes/R1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+
+
+
+
+
+      <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_skid_steer_drive.so'>
+        <updateRate>100.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <leftFrontJoint>L2_link_joint</leftFrontJoint>
+        <rightFrontJoint>R2_link_joint</rightFrontJoint>
+        <leftRearJoint>L1_link_joint</leftRearJoint>
+        <rightRearJoint>R1_link_joint</rightRearJoint>
+        <wheelSeparation>0.4</wheelSeparation>
+        <wheelDiameter>0.270</wheelDiameter>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <torque>15</torque>
+        <topicName>cmd_vel</topicName>
+        <broadcastTF>0</broadcastTF>
+      </plugin>
+      <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_skid_steer_drive.so'>
+        <updateRate>100.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <leftFrontJoint>l2_link_joint</leftFrontJoint>
+        <rightFrontJoint>r2_link_joint</rightFrontJoint>
+        <leftRearJoint>l1_link_joint</leftRearJoint>
+        <rightRearJoint>r1_link_joint</rightRearJoint>
+        <wheelSeparation>0.55</wheelSeparation>
+        <wheelDiameter>0.215</wheelDiameter>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <torque>10</torque>
+        <topicName>cmd_vel</topicName>
+        <broadcastTF>0</broadcastTF>
+      </plugin>
+      <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_skid_steer_drive.so'>
+        <updateRate>100.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <leftFrontJoint>L3_link_joint</leftFrontJoint>
+        <rightFrontJoint>R3_link_joint</rightFrontJoint>
+        <leftRearJoint>l4_link_joint</leftRearJoint>
+        <rightRearJoint>r4_link_joint</rightRearJoint>
+        <wheelSeparation>0.55</wheelSeparation>
+        <wheelDiameter>0.270</wheelDiameter>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <torque>10</torque>
+        <topicName>cmd_vel</topicName>
+        <broadcastTF>0</broadcastTF>
+      </plugin>
+      <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_skid_steer_drive.so'>
+        <updateRate>100.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <leftFrontJoint>l6_link_joint</leftFrontJoint>
+        <rightFrontJoint>r6_link_joint</rightFrontJoint>
+        <leftRearJoint>l5_link_joint</leftRearJoint>
+        <rightRearJoint>r5_link_joint</rightRearJoint>
+        <wheelSeparation>0.55</wheelSeparation>
+        <wheelDiameter>0.270</wheelDiameter>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <torque>10</torque>
+        <topicName>cmd_vel</topicName>
+        <broadcastTF>0</broadcastTF>
+      </plugin>
+      <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_skid_steer_drive.so'>
+        <updateRate>100.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <leftFrontJoint>l7_link_joint</leftFrontJoint>
+        <rightFrontJoint>r7_link_joint</rightFrontJoint>
+        <leftRearJoint>l8_link_joint</leftRearJoint>
+        <rightRearJoint>r8_link_joint</rightRearJoint>
+        <wheelSeparation>0.55</wheelSeparation>
+        <wheelDiameter>0.270</wheelDiameter>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <torque>10</torque>
+        <topicName>cmd_vel</topicName>
+        <broadcastTF>0</broadcastTF>
+      </plugin>
+      <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_skid_steer_drive.so'>
+        <updateRate>100.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <leftFrontJoint>l9_link_joint</leftFrontJoint>
+        <rightFrontJoint>r9_link_joint</rightFrontJoint>
+        <leftRearJoint>l10_link_joint</leftRearJoint>
+        <rightRearJoint>r10_link_joint</rightRearJoint>
+        <wheelSeparation>0.55</wheelSeparation>
+        <wheelDiameter>0.270</wheelDiameter>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <torque>10</torque>
+        <topicName>cmd_vel</topicName>
+        <broadcastTF>0</broadcastTF>
+      </plugin>
+      <static>0</static>
+      <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_skid_steer_drive.so'>
+        <updateRate>100.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <leftFrontJoint>l12_link_joint</leftFrontJoint>
+        <rightFrontJoint>r12_link_joint</rightFrontJoint>
+        <leftRearJoint>l11_link_joint</leftRearJoint>
+        <rightRearJoint>r11_link_joint</rightRearJoint>
+        <wheelSeparation>0.55</wheelSeparation>
+        <wheelDiameter>0.270</wheelDiameter>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <torque>10</torque>
+        <topicName>cmd_vel</topicName>
+        <broadcastTF>0</broadcastTF>
+      </plugin>
+      <pose>0 0 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>0 0</sim_time>
+      <real_time>0 0</real_time>
+      <wall_time>1616479612 36997102</wall_time>
+      <iterations>0</iterations>
+      <model name='drok3_description2'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='L1_link'>
+          <pose>-0.27424 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>5.54053 -0.869164 -10.1176 -2.83271 1.07034 1.77936</acceleration>
+          <wrench>3.86454 -0.606245 -7.05705 0 -0 0</wrench>
+        </link>
+        <link name='L2_link'>
+          <pose>0.27576 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>2.94799 1.93451 7.043 -0.065098 0.506542 -0.282279</acceleration>
+          <wrench>2.05623 1.34933 4.91251 0 -0 0</wrench>
+        </link>
+        <link name='L3_link'>
+          <pose>0.46841 0.25972 0.27346 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-3.51765 -2.01631 12.2769 -0.191028 -0.858384 -0.260447</acceleration>
+          <wrench>-2.45357 -1.40638 8.5632 0 -0 0</wrench>
+        </link>
+        <link name='R1_link'>
+          <pose>-0.27424 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>8.5586 -0.888225 -19.6685 -2.82421 0.504202 -1.30961</acceleration>
+          <wrench>5.96965 -0.61954 -13.7188 0 -0 0</wrench>
+        </link>
+        <link name='R2_link'>
+          <pose>0.27576 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>7.09311 1.70433 -2.94914 2.85216 0.524516 0.281792</acceleration>
+          <wrench>4.94746 1.18878 -2.05703 0 -0 0</wrench>
+        </link>
+        <link name='R3_link'>
+          <pose>0.48054 -0.25972 0.27346 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.795567 -2.06809 2.97561 0.460626 -1.18145 -0.278801</acceleration>
+          <wrench>-0.55491 -1.4425 2.0755 0 -0 0</wrench>
+        </link>
+        <link name='base_footprint_link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>3.01682 -1.04389 -4.39165 0.700064 -0.59147 -0.617651</acceleration>
+          <wrench>124.674 -43.1404 -181.491 0 -0 0</wrench>
+        </link>
+        <link name='l10_link'>
+          <pose>0.07576 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>4.27294 0.509949 0.63681 0.33052 -1.22379 -0.27763</acceleration>
+          <wrench>0.042729 0.005099 0.006368 0 -0 0</wrench>
+        </link>
+        <link name='l11_link'>
+          <pose>-0.22424 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>5.53577 -0.374066 -9.08782 0.332849 -1.22442 -0.276871</acceleration>
+          <wrench>0.055358 -0.003741 -0.090878 0 -0 0</wrench>
+        </link>
+        <link name='l12_link'>
+          <pose>0.22576 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>3.641 0.952447 5.5006 0.334043 -1.22497 -0.276311</acceleration>
+          <wrench>0.03641 0.009524 0.055006 0 -0 0</wrench>
+        </link>
+        <link name='l1_link'>
+          <pose>-0.07424 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>4.90449 0.068239 -4.22393 0.350684 -1.22584 -0.134311</acceleration>
+          <wrench>0.049045 0.000682 -0.042239 0 -0 0</wrench>
+        </link>
+        <link name='l2_link'>
+          <pose>0.12576 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>4.06226 0.658101 2.26039 0.352425 -1.22636 -0.133706</acceleration>
+          <wrench>0.040623 0.006581 0.022604 0 -0 0</wrench>
+        </link>
+        <link name='l4_link'>
+          <pose>0.38576 0.25972 0.1825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.275407 -0.54379 10.2694 0.341263 -1.2271 -0.27386</acceleration>
+          <wrench>-0.002754 -0.005438 0.102694 0 -0 0</wrench>
+        </link>
+        <link name='l5_link'>
+          <pose>0.33576 0.25972 0.1325 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>60.9518 -5.16272 121.788 -1.04096 0.744982 -1.58669</acceleration>
+          <wrench>0.609518 -0.051627 1.21788 0 -0 0</wrench>
+        </link>
+        <link name='l6_link'>
+          <pose>0.43576 0.25972 0.2325 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-2.05054 -1.25311 11.1297 -1.10536 -0.838886 -0.379358</acceleration>
+          <wrench>-0.020505 -0.012531 0.111297 0 -0 0</wrench>
+        </link>
+        <link name='l7_link'>
+          <pose>-0.02424 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>4.66448 0.090792 -2.97304 -1.10204 -0.840343 -0.377944</acceleration>
+          <wrench>0.046645 0.000908 -0.02973 0 -0 0</wrench>
+        </link>
+        <link name='l8_link'>
+          <pose>-0.12424 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>5.08016 -0.211931 -6.17416 -1.10001 -0.840827 -0.377269</acceleration>
+          <wrench>0.050802 -0.002119 -0.061742 0 -0 0</wrench>
+        </link>
+        <link name='l9_link'>
+          <pose>0.17576 0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>3.83255 0.696813 3.43124 -1.09832 -0.841273 -0.376653</acceleration>
+          <wrench>0.038326 0.006968 0.034312 0 -0 0</wrench>
+        </link>
+        <link name='r10_link'>
+          <pose>0.07576 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>7.02463 0.392141 -8.96881 -1.09554 -0.842021 -0.375721</acceleration>
+          <wrench>0.070246 0.003921 -0.089688 0 -0 0</wrench>
+        </link>
+        <link name='r11_link'>
+          <pose>-0.22424 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>8.27248 -0.516686 -18.5744 -1.09486 -0.842706 -0.374983</acceleration>
+          <wrench>0.082725 -0.005167 -0.185744 0 -0 0</wrench>
+        </link>
+        <link name='r12_link'>
+          <pose>0.22576 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>6.40157 0.846906 -4.16622 -1.09346 -0.843553 -0.373943</acceleration>
+          <wrench>0.064016 0.008469 -0.041662 0 -0 0</wrench>
+        </link>
+        <link name='r1_link'>
+          <pose>-0.07424 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>7.64953 -0.062251 -13.7717 -1.07947 -0.844333 -0.231239</acceleration>
+          <wrench>0.076495 -0.000623 -0.137717 0 -0 0</wrench>
+        </link>
+        <link name='r2_link'>
+          <pose>0.12576 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>6.8181 0.544087 -7.36802 -1.07845 -0.84503 -0.230403</acceleration>
+          <wrench>0.068181 0.005441 -0.07368 0 -0 0</wrench>
+        </link>
+        <link name='r4_link'>
+          <pose>0.38576 -0.25972 0.1825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>2.5348 -0.49269 0.541377 -1.0915 -0.845776 -0.371637</acceleration>
+          <wrench>0.025348 -0.004927 0.005414 0 -0 0</wrench>
+        </link>
+        <link name='r5_link'>
+          <pose>0.33576 -0.25972 0.1325 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>79.8243 -4.3146 137.236 2.67969 -0.065181 -0.643105</acceleration>
+          <wrench>0.798243 -0.043146 1.37236 0 -0 0</wrench>
+        </link>
+        <link name='r6_link'>
+          <pose>0.43576 -0.25972 0.2325 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.795804 -1.40102 1.2769 0.634873 -0.361104 -0.229787</acceleration>
+          <wrench>0.007958 -0.01401 0.012769 0 -0 0</wrench>
+        </link>
+        <link name='r7_link'>
+          <pose>-0.02424 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>7.41013 0.238353 -12.6148 0.634162 -0.362174 -0.229259</acceleration>
+          <wrench>0.074101 0.002384 -0.126148 0 -0 0</wrench>
+        </link>
+        <link name='r8_link'>
+          <pose>-0.12424 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>7.82001 -0.056976 -15.7686 0.634999 -0.362854 -0.228482</acceleration>
+          <wrench>0.0782 -0.00057 -0.157686 0 -0 0</wrench>
+        </link>
+        <link name='r9_link'>
+          <pose>0.17576 -0.25972 0.0825 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>6.5916 0.829167 -6.30828 0.63608 -0.363586 -0.227603</acceleration>
+          <wrench>0.065916 0.008292 -0.063083 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-0.554843 5.29717 1.69271 0 0.131643 -1.45499</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+
+  <!-- hokuyo -->
+  <gazebo reference="hokuyo_link">
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/rrbot/laser/scan</topicName>
+        <frameName>hokuyo_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+
+
+
+  </world>
+</sdf>
