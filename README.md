@@ -1,4 +1,4 @@
-# omo_r1mini
+# drok3 description
 
 cd catkin_ws/src
 
