@@ -1813,12 +1813,101 @@
 
 
 
+  <joint name="lidar_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.5 -0.000335907486689213 0.0569327313017182" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+  </joint>
+
+<link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="0.5 -0.000335907486689213 0.0569327313017182"
+        rpy="0 0 0" />
+      <mass
+
+        value="0.5" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>-->
+    <!--<collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/base_link.STL" />
+      </geometry>
+    </collision>-->
+  </link>
+
+   <!-- hokuyo -->
+  <gazebo reference="lidar_link">
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>100</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.141592</min_angle>
+            <max_angle>3.141592</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>3.0</max>
+          <resolution>0.05</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>lidar_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+
+
+
+
+
+
 
  <gazebo reference="L1_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>10.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1000.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1833,8 +1922,9 @@
  <gazebo reference="R1_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>10.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>10000.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1849,8 +1939,8 @@
 <gazebo reference="L2_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>10.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>10000.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
     <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -1865,8 +1955,8 @@
 <gazebo reference="R2_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>10.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1000.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -1882,8 +1972,8 @@
  <gazebo reference="l1_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>10.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -1898,8 +1988,8 @@
 <gazebo reference="l2_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>10.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -1914,8 +2004,8 @@
 <gazebo reference="l3_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>10.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -1928,8 +2018,8 @@
   </gazebo>
 <gazebo reference="l4_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
-    <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <kd>1.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -1944,7 +2034,7 @@
 <gazebo reference="l5_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -1959,7 +2049,7 @@
 <gazebo reference="l6_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -1974,8 +2064,8 @@
 <gazebo reference="l7_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>100.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -1989,8 +2079,8 @@
 <gazebo reference="l8_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>100.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -2003,8 +2093,8 @@
   </gazebo>
 <gazebo reference="l9_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
-    <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <kd>1.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2019,7 +2109,7 @@
 <gazebo reference="l10_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2034,7 +2124,7 @@
 <gazebo reference="l11_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.7</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2049,7 +2139,7 @@
 <gazebo reference="l12_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2067,8 +2157,8 @@
 <gazebo reference="r1_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>10.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -2082,8 +2172,8 @@
 <gazebo reference="r2_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>10.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -2097,8 +2187,8 @@
 <gazebo reference="r3_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>10.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -2112,7 +2202,7 @@
 <gazebo reference="r4_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2127,7 +2217,7 @@
 <gazebo reference="r5_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2142,7 +2232,7 @@
 <gazebo reference="r6_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2157,8 +2247,8 @@
 <gazebo reference="r7_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>100.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -2172,8 +2262,8 @@
 <gazebo reference="r8_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1.0</mu2>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>100.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
@@ -2187,7 +2277,7 @@
 <gazebo reference="r9_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2202,7 +2292,7 @@
 <gazebo reference="r10_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2217,7 +2307,7 @@
 <gazebo reference="r11_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
@@ -2232,7 +2322,7 @@
 <gazebo reference="r12_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>100.0</kd>
-    <mu1>1.0</mu1> <!-- was 10 -->
+    <mu1>0.4</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
 <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
