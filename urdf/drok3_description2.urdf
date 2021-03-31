@@ -154,7 +154,7 @@
     name="R2_link">
     <inertial>
       <origin
-        xyz="-3.60518028585943E-06 0 -4.18428738963028E-07"
+        xyz="-3.60518028585943E-06 0 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828588" />
@@ -260,7 +260,7 @@
     name="L1_link">
     <inertial>
       <origin
-        xyz="-3.60518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        xyz="-3.60518028584556E-06 -1.11022302462516E-16 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828587" />
@@ -313,7 +313,7 @@
     name="L2_link">
     <inertial>
       <origin
-        xyz="-3.60518028585943E-06 -1.11022302462516E-16 -4.1842873894915E-07"
+        xyz="-3.60518028585943E-06 -1.11022302462516E-16 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828589" />
@@ -427,8 +427,8 @@
     <wheelSeparation>0.55</wheelSeparation>
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>15</torque>
-    <topicName>cmd_vel2</topicName>
+    <torque>30</torque>
+    <topicName>test_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
@@ -444,7 +444,7 @@
     <wheelSeparation>0.55</wheelSeparation>
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>15</torque>
+    <torque>10</torque>
     <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
@@ -461,7 +461,7 @@
     <wheelSeparation>0.55</wheelSeparation>
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>15</torque>
+    <torque>10</torque>
     <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
@@ -478,7 +478,7 @@
     <wheelSeparation>0.55</wheelSeparation>
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>15</torque>
+    <torque>10</torque>
     <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
@@ -495,7 +495,7 @@
     <wheelSeparation>0.55</wheelSeparation>
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>15</torque>
+    <torque>10s</torque>
     <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
@@ -513,7 +513,7 @@
     <wheelSeparation>0.55</wheelSeparation>
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>15</torque>
+    <torque>10</torque>
     <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
@@ -532,17 +532,11 @@
     <wheelSeparation>0.55</wheelSeparation>
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>15</torque>
+    <torque>10</torque>
     <topicName>cmd_vel2</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
-
-
-
-
-
-
 
 
 
@@ -674,7 +668,7 @@
     name="l1_link">
     <inertial>
       <origin
-        xyz="-3.40518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        xyz="-3.40518028584556E-06 -1.11022302462516E-16 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828587" />
@@ -728,7 +722,7 @@
     name="l2_link">
     <inertial>
       <origin
-        xyz="-3.20518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        xyz="-3.20518028584556E-06 -1.11022302462516E-16 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828587" />
@@ -1240,7 +1234,7 @@
     name="l7_link">
     <inertial>
       <origin
-        xyz="-3.35518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        xyz="-3.35518028584556E-06 -1.11022302462516E-16 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828587" />
@@ -1297,7 +1291,7 @@
     name="l8_link">
     <inertial>
       <origin
-        xyz="-3.40518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        xyz="-3.40518028584556E-06 -1.11022302462516E-16 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828587" />
@@ -1465,7 +1459,7 @@
     name="l9_link">
     <inertial>
       <origin
-        xyz="-3.15518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        xyz="-3.15518028584556E-06 -1.11022302462516E-16 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828587" />
@@ -1521,7 +1515,7 @@
     name="l10_link">
     <inertial>
       <origin
-        xyz="-3.25518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        xyz="-3.25518028584556E-06 -1.11022302462516E-16 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828587" />
@@ -1688,7 +1682,7 @@
     name="l11_link">
     <inertial>
       <origin
-        xyz="-3.55518028584556E-06 -1.11022302462516E-16 -4.18428738963028E-07"
+        xyz="-3.55518028584556E-06 -1.11022302462516E-16 -2.08206009358336E-06"
         rpy="0 0 0" />
       <mass
         value="0.697502716828587" />
@@ -1824,7 +1818,7 @@
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>10.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1000000.0</mu2>
+    <mu2>1000.0</mu2>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1840,7 +1834,7 @@
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>10.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1000000.0</mu2>
+    <mu2>10000.0</mu2>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1856,7 +1850,8 @@
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>10.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1000000.0</mu2>
+    <mu2>10000.0</mu2>
+    <fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1871,7 +1866,8 @@
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>10.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
-    <mu2>1000000.0</mu2>
+    <mu2>1000.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1888,6 +1884,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>10.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1903,6 +1900,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>10.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1918,6 +1916,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>10.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1932,6 +1931,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1946,6 +1946,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1960,6 +1961,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1974,6 +1976,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -1988,6 +1991,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2002,6 +2006,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2016,6 +2021,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2030,6 +2036,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2044,6 +2051,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2061,6 +2069,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>10.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2075,6 +2084,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>10.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2089,6 +2099,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>10.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2103,6 +2114,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2117,6 +2129,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2131,6 +2144,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2145,6 +2159,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2159,6 +2174,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2173,6 +2189,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2187,6 +2204,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2201,6 +2219,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2215,6 +2234,7 @@
     <kd>100.0</kd>
     <mu1>1.0</mu1> <!-- was 10 -->
     <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
       <!-- how to get these into <surface><friction><ode>... ?
         slip1 0.5 /slip1 
          slip2 0 /slip2 
@@ -2224,6 +2244,10 @@
     <minDepth>0.00</minDepth>
     <!--<material value="Gazebo/Black" />-->
   </gazebo>
+
+
+
+
 
 
 </robot>
