@@ -1898,10 +1898,6 @@
 
 
 
-
-
-
-
  <gazebo reference="L1_link">
     <kp>1000000.0</kp> <!-- kp and kd for rubber -->
     <kd>10.0</kd>
