@@ -11,3 +11,12 @@ cd ~/catkin_ws
 catkin build drok3_description2 cmdvel_to_cmdvel2 
 
 roslaunch drok3_description2 gazebo.launch 
+
+
+gedit ~/.bashrc
+
+  ㄴ export GAZEBO_MODEL_PATH=~/catkin_ws/src/drok3_description/world  (추가) 
+
+  ㄴ 저장
+
+source ~/.bashrc
