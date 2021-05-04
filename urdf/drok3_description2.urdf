@@ -427,9 +427,9 @@
     <wheelSeparation>0.55</wheelSeparation>
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>30</torque>
-    <topicName>test_vel2</topicName>
-    <broadcastTF>false</broadcastTF>
+    <torque>10</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>true</broadcastTF>
   </plugin>
 </gazebo>
 
@@ -445,7 +445,7 @@
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
     <torque>10</torque>
-    <topicName>cmd_vel2</topicName>
+    <topicName>cmd_vel</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
@@ -462,11 +462,10 @@
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
     <torque>10</torque>
-    <topicName>cmd_vel2</topicName>
+    <topicName>cmd_vel</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
-
 <gazebo>
   <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
     <updateRate>100.0</updateRate>
@@ -479,11 +478,10 @@
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
     <torque>10</torque>
-    <topicName>cmd_vel2</topicName>
+    <topicName>cmd_vel</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
-
 <gazebo>
   <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
     <updateRate>100.0</updateRate>
@@ -495,12 +493,11 @@
     <wheelSeparation>0.55</wheelSeparation>
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>10s</torque>
-    <topicName>cmd_vel2</topicName>
+    <torque>10</torque>
+    <topicName>cmd_vel</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
-
 
 <gazebo>
   <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
@@ -514,11 +511,10 @@
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
     <torque>10</torque>
-    <topicName>cmd_vel2</topicName>
+    <topicName>cmd_vel</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
-
 
 
 <gazebo>
@@ -533,7 +529,7 @@
     <wheelDiameter>0.170</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
     <torque>10</torque>
-    <topicName>cmd_vel2</topicName>
+    <topicName>cmd_vel</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
