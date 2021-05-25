@@ -1,0 +1,9 @@
+scan_filter_chain:
+- name: AngularBoundsFilter1
+  type: laser_filters/LaserScanAngularBoundsFilterInPlace
+  params:
+    lower_angle: 1.571
+    upper_angle: 3.142
+
+
+  

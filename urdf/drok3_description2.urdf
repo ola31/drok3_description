@@ -4,46 +4,7 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="drok3_description2">
-  <link
-    name="base_footprint_link">
-    <inertial>
-      <origin
-        xyz="-1.25317946727543E-05 0 0.113005302816333"
-        rpy="0 0 0" />
-      <mass
-        value="3.02141422902365" />
-      <inertia
-        ixx="0.0423835325539121"
-        ixy="-1.16406809588335E-16"
-        ixz="3.76629582774629E-08"
-        iyy="0.0758033294719559"
-        iyz="2.81992537937316E-18"
-        izz="0.118174283651174" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://drok3_description2/meshes/base_footprint_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
-      </material>
-    </visual>
-    <!--<collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://drok3_description2/meshes/base_footprint_link.STL" />
-      </geometry>
-    </collision>-->
-  </link>
+  
   <link
     name="base_link">
     <inertial>
@@ -84,19 +45,7 @@
       </geometry>
     </collision>-->
   </link>
-  <joint
-    name="base_link_joint"
-    type="fixed">
-    <origin
-      xyz="0 0 0.1105"
-      rpy="0 0 0" />
-    <parent
-      link="base_footprint_link" />
-    <child
-      link="base_link" />
-    <axis
-      xyz="0 0 0" />
-  </joint>
+
   <link
     name="R1_link">
     <inertial>
