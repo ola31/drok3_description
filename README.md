@@ -27,7 +27,7 @@ ROS 버전에 따라서 melodic 대신 kinetic, noetic 등을 넣어서 설치
 
 	roslaunch drok3_description2 display.launch
 
-	rosrun gmapping slam_gmapping scan:=scan
+	rosrun gmapping slam_gmapping scan:=scan_filtered
 
 #### gazebo map 경로 설정 
 
